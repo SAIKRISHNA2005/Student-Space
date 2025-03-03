@@ -14,7 +14,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon, text, to, active = fals
       <Link
         to={to}
         className={`flex items-center py-1.5 rounded ${
-          active ? 'bg-blue-800 text-white' : 'hover:bg-blue-800'
+          active ? 'bg-[#1E3A8A] text-white' : 'hover:bg-[#1E3A8A]'
         }`}
       >
         <span>{text}</span>

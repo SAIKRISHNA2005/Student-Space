@@ -40,18 +40,18 @@ const DigitalNotesSpace = () => {
         <Header toggleSidebar={toggleSidebar} />
         
         <main className="flex-1 overflow-y-auto p-6 flex flex-col">
-          <h1 className="text-blue-800 text-2xl font-bold mb-4">Digital Notes Space</h1>
+          <h1 className="text-[#1E3A8A] text-2xl font-bold mb-4">Digital Notes Space</h1>
           
           <div className="flex items-center mb-4"> {/* Added margin-bottom */}
-            <FontAwesomeIcon icon={faClipboardList} className="text-blue-600 mr-2" />
-            <span className="text-blue-800 font-bold">Notes</span>
+            <FontAwesomeIcon icon={faClipboardList} className="text-[#1E3A8A] mr-2" />
+            <span className="text-[#1E3A8A] font-bold">Notes</span>
           </div>
 
           <Tabs />
 
           {notesData.map((subject, subjectIndex) => (
             <section key={subjectIndex} className="relative mb-8"> {/* Added margin-bottom */}
-              <h2 className="text-xl text-blue-800 font-bold mb-3">{subject.subject}</h2>
+              <h2 className="text-xl text-[#1E3A8A] font-bold mb-3">{subject.subject}</h2>
               <div className="relative overflow-hidden">
                 <div
                   className="flex transition-transform duration-300 ease-out"
@@ -88,14 +88,14 @@ const DigitalNotesSpace = () => {
                   className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                   aria-label="Next notes"
                 >
-                  <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                  <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
                 </button>
               </div>
             </section>
           ))}
 
           <section className="relative mb-8"> {/* Added margin-bottom */}
-            <h2 className="text-xl text-blue-800 font-bold mb-3">Lecture Videos</h2>
+            <h2 className="text-xl text-[#1E3A8A] font-bold mb-3">Lecture Videos</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -126,13 +126,13 @@ const DigitalNotesSpace = () => {
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                 aria-label="Next lectures"
               >
-                <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
               </button>
             </div>
           </section>
 
           <section className="relative"> {/* No margin needed here as it's the last section */}
-            <h2 className="text-xl text-blue-800 font-bold mb-3">Assignments</h2>
+            <h2 className="text-xl text-[#1E3A8A] font-bold mb-3">Assignments</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -167,7 +167,7 @@ const DigitalNotesSpace = () => {
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                 aria-label="Next assignments"
               >
-                <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
               </button>
             </div>
           </section>

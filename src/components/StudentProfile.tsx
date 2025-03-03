@@ -35,13 +35,13 @@ const StudentProfile: React.FC = () => {
       )}
 
       {/* Content */}
-      <div className="md:ml-52 w-full overflow-x-hidden"> {/* Add overflow-x-hidden here */}
+      <div className="md:ml-52 w-full overflow-x-hidden "> {/* Add overflow-x-hidden here */}
         {/* Background Image Container */}
-        <div className="relative md:w-5/6 h-32 md:h-40 sm:w-full">
+        <div className="relative md:w-5/6 h-32 md:h-60 sm:w-full">
           <img
             src="src/public/focus-bg.gif"
             alt="School Background"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-md"
           />
 
           {/* Header Positioned at the Top */}

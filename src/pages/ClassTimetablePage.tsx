@@ -27,13 +27,13 @@ const ClassTimetable = () => {
         <main className="flex-1 overflow-y-auto p-6 flex flex-col">
           <div className="flex-1 flex">
             <div className="flex-1">
-              <h1 className="text-3xl font-bold text-blue-900 mb-4">Class Timetable</h1>
+              <h1 className="text-3xl font-bold text-[#1E3A8A] mb-4">Class Timetable</h1>
               <div className="flex space-x-2 mb-6">
                 {days.map(day => (
                   <button
                     key={day}
                     onClick={() => setActiveDay(day)}
-                    className={`px-4 py-2 rounded-lg text-lg font-medium transition-all ${activeDay === day ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border border-blue-600'}`}
+                    className={`px-4 py-2 rounded-lg text-lg font-medium transition-all ${activeDay === day ? 'bg-[#1E3A8A] text-white' : 'bg-white text-[#1E3A8A] border border-[#1E3A8A]'}`}
                   >
                     {day}
                   </button>

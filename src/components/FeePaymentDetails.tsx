@@ -4,9 +4,9 @@ import { recentPayments } from "../data/index"; // Adjust the import path as nee
 
 const FeePaymentDetails: React.FC = () => {
   return (
-    <div className="bg-white md:p-4 sm:p-6 rounded-lg border border-blue-700 shadow-md w-full max-w-md mx-auto sm:max-w-lg lg:max-w-3xl">
+    <div className="bg-white md:p-4 sm:p-6 rounded-lg border border-[#1E3A8A] shadow-md w-full max-w-md mx-auto sm:max-w-lg lg:max-w-3xl">
       {/* Title */}
-      <h3 className="md:text-xl sm:text-md text-blue-800 sm:text-base font-semibold mb-3 text-center sm:text-left">
+      <h3 className="md:text-xl sm:text-md text-[#1E3A8A] sm:text-base font-semibold mb-3 text-center sm:text-left">
         Fee Payment Details
       </h3>
 

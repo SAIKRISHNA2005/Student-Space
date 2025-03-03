@@ -26,9 +26,9 @@ const Timetable: React.FC<TimetableProps> = ({ activeDay }) => {
   return (
     <div className="max-w-4xl mx-auto space-y-2">
       {timetable[activeDay].map((entry, index) => (
-        <div key={index} className={`border rounded-lg p-4 flex justify-between align-middle items-center ${entry.type === 'break' ? 'bg-blue-600 text-white' : 'bg-white'}`}>
+        <div key={index} className={`border rounded-lg p-4 flex justify-between align-middle items-center ${entry.type === 'break' ? 'bg-[#1E3A8A] text-white' : 'bg-white'}`}>
           <div className="flex flex-col">
-            <strong className={`text-lg ${entry.type === 'break' ? 'text-white' : 'text-blue-900'}`}>{entry.subject}</strong>
+            <strong className={`text-lg ${entry.type === 'break' ? 'text-white' : 'text-[#1E3A8A]'}`}>{entry.subject}</strong>
             {entry.type && <span className="text-sm text-gray-600">{entry.type}</span>}
           </div>
           <span className={`text-lg ${entry.type === 'break' ? 'text-white' : 'text-gray-700'}`}>{entry.time}</span>

@@ -8,7 +8,7 @@ const Attendance: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg border border-blue-700 shadow">
+    <div className="bg-white p-4 rounded-lg border border-[#1E3A8A] shadow">
       <div className="flex justify-between items-center mb-2 mr-2">
         <h3 className="font-bold">Attendance</h3>
         <div className="flex space-x-2">
@@ -16,8 +16,8 @@ const Attendance: React.FC = () => {
             onClick={() => toggleButton('year')}
             className={`text-xs px-3 py-1 rounded ${
               activeButton === 'year'
-                ? 'bg-blue-500 text-white'
-                : 'bg-white text-blue-500 border border-blue-500'
+                ? 'bg-[#1E3A8A] text-white'
+                : 'bg-white text-[#1E3A8A] border border-[#1E3A8A]'
             }`}
           >
             Y
@@ -26,8 +26,8 @@ const Attendance: React.FC = () => {
             onClick={() => toggleButton('month')}
             className={`text-xs px-3 py-1 rounded ${
               activeButton === 'month'
-                ? 'bg-blue-500 text-white'
-                : 'bg-white text-blue-500 border border-blue-500'
+                ? 'bg-[#1E3A8A] text-white'
+                : 'bg-white text-[#1E3A8A] border border-[#1E3A8A]'
             }`}
           >
             M
@@ -66,17 +66,17 @@ const Attendance: React.FC = () => {
 
         {/* Attendance Details */}
         <div className="text-left">
-          <h4 className="text-md font-bold text-blue-800 mb-2">November 2024</h4>
+          <h4 className="text-md font-bold text-[#1E3A8A] mb-2">November 2024</h4>
           <div className="space-y-1">
-            <div className="flex justify-between text-xs font-medium text-blue-800 mb-1">
+            <div className="flex justify-between text-xs font-medium text-[#1E3A8A] mb-1">
               <span>Total Working days</span>
               <span>: 20</span>
             </div>
-            <div className="flex justify-between text-xs font-medium text-blue-800 mb-1">
+            <div className="flex justify-between text-xs font-medium text-[#1E3A8A] mb-1">
               <span>No. Present</span>
               <span>: 16</span>
             </div>
-            <div className="flex justify-between text-xs font-medium text-blue-800 mb-1">
+            <div className="flex justify-between text-xs font-medium text-[#1E3A8A] mb-1">
               <span>No. Absent</span>
               <span>: 04</span>
             </div>
