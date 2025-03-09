@@ -34,7 +34,7 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-2">
         {/* Checkbox and Status Text */}
         <input
           type="checkbox"
