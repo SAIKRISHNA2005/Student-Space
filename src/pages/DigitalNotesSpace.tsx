@@ -57,7 +57,7 @@ const DigitalNotesSpace = () => {
         <Header toggleSidebar={toggleSidebar} />
 
         <main className="flex-1 overflow-y-auto p-2 md:pl-12 flex flex-col">
-          <h1 className="text-[#1E3A8A] md:text-3xl sm:text-lg font-bold mb-4">Digital Notes Space</h1>
+          <h1 className="text-[#1E3A8A] md:text-3xl xs:text-2xl font-bold mb-4">Digital Notes Space</h1>
           <span className="text-[#1E3A8A] md:text-xl sm:text-md font-semibold pb-2">Notes</span>
 
           <Tabs />
