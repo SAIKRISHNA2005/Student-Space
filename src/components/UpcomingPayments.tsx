@@ -13,24 +13,24 @@ const UpcomingPayments = () => {
         <div key={index} className="flex justify-between items-center py-2 border-b last:border-none">
           {/* Left Section */}
           <div className="flex items-center space-x-3">
-            <div className="w-1 h-6 bg-blue-700 rounded-full" />
+            <div className="w-1 h-10 bg-blue-700 rounded-full" />
             <div>
-              <p className="text-blue-700 font-medium">{payment.name}</p>
+              <p className="text-blue-700 text-md font-medium">{payment.name}</p>
               <p className="text-sm text-gray-500">{payment.type}</p>
             </div>
           </div>
 
           {/* Middle Section */}
-          <div className="text-right">
-            <p className="font-medium text-blue-600">{payment.amount}</p>  {/* Updated text color */}
+          <div className="text-left pr-2">
+            <p className="font-medium sm:text-xs md:text-sm text-blue-600">{payment.amount}</p>  {/* Updated text color */}
             <p className="text-sm text-gray-500">Due {payment.due}</p>
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 sm:flex-col md:flex-row">
             <input type="checkbox" className="w-4 h-4" />
-            <p className="text-sm text-blue-600">Payment Pending</p>  {/* Updated text color */}
-            <button className="px-3 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
+            <p className="md:text-sm sm:text-xs text-blue-600">Payment Pending</p>  {/* Updated text color */}
+            <button className="px-3 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition hidden sm:block">
               Download Invoice
             </button>
             <button className="px-3 py-1 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition">

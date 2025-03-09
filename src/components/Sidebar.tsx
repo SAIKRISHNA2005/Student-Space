@@ -8,18 +8,18 @@ const Sidebar: React.FC = () => {
       <div className="mb-2">
         <h1 className="text-l font-bold">SPace</h1>
       </div>
-      <ul className="flex flex-col justify-between flex-grow space-y-2">
+      <ul className="flex flex-col flex-grow space-y-2">
         <SidebarItem icon={<Home size={18} />} text="Dashboard" to="/" />
-        <SidebarItem icon={<User size={18} />} text="Attendance" to="/attendance" />
-        <SidebarItem icon={<Calendar size={18} />} text="Events" to="/events" />
-        <SidebarItem icon={<FileText size={18} />} text="Marks" to="/marks" />
+        {/* <SidebarItem icon={<User size={18} />} text="Attendance" to="/attendance" /> */}
+        {/* <SidebarItem icon={<Calendar size={18} />} text="Events" to="/events" /> */}
+        {/* <SidebarItem icon={<FileText size={18} />} text="Marks" to="/marks" /> */}
         <SidebarItem icon={<Clock size={18} />} text="Timetable" to="/class-timetable" />
-        <SidebarItem icon={<Grid size={18} />} text="Exam Schedule" to="/exam-schedule" />
+        {/* <SidebarItem icon={<Grid size={18} />} text="Exam Schedule" to="/exam-schedule" /> */}
         <SidebarItem icon={<CreditCard size={18} />} text="Fee Payment" to="/fee-payment" />
         <SidebarItem icon={<BookOpen size={18} />} text="Digital Notes Space" to="/notes" />
-        <SidebarItem icon={<HelpCircle size={18} />} text="Enquiry" to="/enquiry" />
-        <SidebarItem icon={<Calendar size={18} />} text="Academic Calendar" to="/academic-calendar" />
-        <SidebarItem icon={<BookOpen size={18} />} text="Subjects and Syllabus" to="/syllabus" />
+        {/* <SidebarItem icon={<HelpCircle size={18} />} text="Enquiry" to="/enquiry" /> */}
+        {/* <SidebarItem icon={<Calendar size={18} />} text="Academic Calendar" to="/academic-calendar" /> */}
+        {/* <SidebarItem icon={<BookOpen size={18} />} text="Subjects and Syllabus" to="/syllabus" /> */}
       </ul>
     </nav>
   );

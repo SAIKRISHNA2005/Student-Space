@@ -27,7 +27,7 @@ const AssignmentCard = ({ title, description, dueDate, teacher, status }: Assign
     <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 w-full h-auto flex flex-col justify-between">
       {/* Title with Status Indicator */}
       <div className="flex justify-between items-start mb-1">
-        <h3 className="text-base font-semibold text-blue-900">{title}</h3>
+        <h3 className="md:text-lg sm:text-base font-semibold text-blue-900">{title}</h3>
         <FontAwesomeIcon 
           icon={faCircle} 
           className={`text-xs ${getStatusColor(status)}`} 

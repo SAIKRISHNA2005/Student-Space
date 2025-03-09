@@ -25,9 +25,9 @@ const FeePaymentPage = () => {
       {isSidebarOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           <div className="absolute inset-0 bg-gray-600 bg-opacity-75" onClick={toggleSidebar}></div>
-          <div className="absolute inset-y-0 left-0 w-56 bg-[#1E3A8A] text-white shadow-lg">
+          <div className="absolute inset-y-0 left-0 w-56 shadow-lg">
             <div className="flex justify-end p-4">
-              <button onClick={toggleSidebar} className="text-white">
+              <button onClick={toggleSidebar} className="text-black">
                 <X size={24} />
               </button>
             </div>
@@ -43,22 +43,20 @@ const FeePaymentPage = () => {
 
         {/* Fee Payment Content */}
         <main className="flex-1 overflow-y-auto p-6">
-          <div className="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-6">
+          <div className="max-w-5xl mx-auto">
             {/* Fee Payment Header */}
             <FeePaymentHeader />
 
             {/* Recent Payments Section */}
             <div className="mb-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold text-blue-800">Recent Payments</h2>
+                <h2 className="font-medium text-blue-800 text-[20px]">Recent Payments</h2>
                 <div className="flex space-x-2">
                   {["All", "Paid", "Pending"].map((status) => (
                     <button
                       key={status}
-                      className={`px-4 py-1 rounded-lg border transition-all duration-200 ${
-                        filter === status
-                          ? "bg-blue-700 text-white"
-                          : "border-blue-700 text-blue-700 hover:bg-blue-100"
+                      className={`px-5 py-0.5 rounded-lg border transition-all duration-200 ${
+                        filter === status ? "text-white bg-blue-700" : "border-blue-800 text-blue-700 hover:bg-gray-200"
                       }`}
                       onClick={() => setFilter(status)}
                     >
@@ -73,7 +71,7 @@ const FeePaymentPage = () => {
             </div>
 
             {/* Upcoming Payments Section */}
-            <h2 className="text-lg font-semibold text-blue-800 mb-4">Upcoming Payments</h2>
+            <h2 className="font-medium text-blue-800 text-[20px] mb-4">Upcoming Payments</h2>
             <UpcomingPayments />
           </div>
         </main>

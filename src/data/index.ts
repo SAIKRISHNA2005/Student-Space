@@ -1,8 +1,20 @@
 // data.js
+// export interface Note {
+//   title: string;
+//   description: string;
+//   date: string;
+// }
+
 export interface Note {
   title: string;
   description: string;
   date: string;
+  teacher: string;
+}
+
+export interface TimetableEntry {
+  subject: string;
+  time: string;
 }
 
 export interface Subject {
@@ -40,6 +52,12 @@ export interface TimetableEntry {
   time: string;
 }
 
+export interface AssignmentInClassTimeTable {
+  title: string;
+  description: string;
+  dueDate: string;
+  teacher: string;
+}
 
 export const notesData = [
   {
@@ -137,3 +155,20 @@ export const timetableData: TimetableEntry[] = [
   { subject: "Accountancy", time: "8:30-9:30" },
   { subject: "Business Studies", time: "9:45-10:45" },
 ];
+
+export const assignments: AssignmentInClassTimeTable[] = [
+  {
+    title: "Computer Science",
+    description: "Complete Experiment 6 in Lab Record and submit the copy in cabin. Prepare for Viva for Experiment 4 and 5.",
+    dueDate: "28 Nov'24",
+    teacher: "Teacher Name",
+  },
+  {
+    title: "Mathematics",
+    description: "Quiz will be conducted for Chapters 6 and 7 on 28 Nov’24, Thursday. Be prepared.",
+    dueDate: "28 Nov'24",
+    teacher: "Teacher Name",
+  },
+];
+
+

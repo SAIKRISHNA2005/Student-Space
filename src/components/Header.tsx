@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
         </button>
 
         {/* Right-Side Icons (Notification Bell & User Profile) */}
-        <div className="flex items-center space-x-4 ml-auto">
+        <div className="flex items-center space-x-4 ml-auto ">
           <Bell size={20} className="text-[#1E3A8A]" />
           <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
             <User size={16} className="text-black" />

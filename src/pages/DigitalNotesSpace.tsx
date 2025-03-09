@@ -31,27 +31,40 @@ const DigitalNotesSpace = () => {
   }, []);
 
   return (
-    <div className="flex h-screen bg-gray-100 overflow-hidden">
-      <div className="hidden md:block w-56 bg-[#1E3A8A] text-white shadow-lg">
+    <div className="flex h-screen overflow-hidden">
+      {/* Sidebar (Desktop) */}
+      <div className="hidden md:block w-56">
         <Sidebar />
       </div>
-      
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <Header toggleSidebar={toggleSidebar} />
-        
-        <main className="flex-1 overflow-y-auto p-6 flex flex-col">
-          <h1 className="text-blue-800 text-2xl font-bold mb-4">Digital Notes Space</h1>
-          
-          <div className="flex items-center mb-4"> {/* Added margin-bottom */}
-            <FontAwesomeIcon icon={faClipboardList} className="text-blue-600 mr-2" />
-            <span className="text-blue-800 font-bold">Notes</span>
+
+      {/* Sidebar (Mobile) */}
+      {isSidebarOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="absolute inset-0 bg-gray-600 bg-opacity-75" onClick={toggleSidebar}></div>
+          <div className="absolute inset-y-0 left-0 w-56 shadow-lg">
+            <div className="flex justify-end p-4">
+              <button onClick={toggleSidebar} className="text-black">
+                <FontAwesomeIcon icon={faChevronRight} size={24} />
+              </button>
+            </div>
+            <Sidebar />
           </div>
+        </div>
+      )}
+
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Header */}
+        <Header toggleSidebar={toggleSidebar} />
+
+        <main className="flex-1 overflow-y-auto p-2 md:pl-12 flex flex-col">
+          <h1 className="text-blue-900 md:text-3xl sm:text-lg font-bold mb-4">Digital Notes Space</h1>
+          <span className="text-blue-900 md:text-xl sm:text-md font-semibold pb-2">Notes</span>
 
           <Tabs />
 
           {notesData.map((subject, subjectIndex) => (
-            <section key={subjectIndex} className="relative mb-8"> {/* Added margin-bottom */}
-              <h2 className="text-xl text-blue-800 font-bold mb-3">{subject.subject}</h2>
+            <section key={subjectIndex} className="relative mb-8">
+              <h2 className="md:text-lg sm:text-md text-blue-800 font-bold mb-3">{subject.subject}</h2>
               <div className="relative overflow-hidden">
                 <div
                   className="flex transition-transform duration-300 ease-out"
@@ -62,7 +75,7 @@ const DigitalNotesSpace = () => {
                   {subject.notes.map((note, noteIndex) => (
                     <div
                       key={noteIndex}
-                      className="min-w-[50%] pr-3 pl-0.5 transition-opacity duration-300 ease-out"
+                      className="min-w-[45%] pr-3 pl-2 transition-opacity duration-300 ease-out"
                       style={{
                         opacity:
                           noteIndex >= currentNoteIndices[subjectIndex] &&
@@ -80,8 +93,7 @@ const DigitalNotesSpace = () => {
                     setCurrentNoteIndices((prevIndices) => {
                       const newIndices = [...prevIndices];
                       newIndices[subjectIndex] =
-                        (newIndices[subjectIndex] + 1) %
-                        notesData[subjectIndex].notes.length;
+                        (newIndices[subjectIndex] + 1) % notesData[subjectIndex].notes.length;
                       return newIndices;
                     })
                   }
@@ -94,8 +106,8 @@ const DigitalNotesSpace = () => {
             </section>
           ))}
 
-          <section className="relative mb-8"> {/* Added margin-bottom */}
-            <h2 className="text-xl text-blue-800 font-bold mb-3">Lecture Videos</h2>
+          <section className="relative mb-8">
+            <h2 className="text-xl text-blue-800 font-semibold mb-3">Lecture Videos</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -107,7 +119,7 @@ const DigitalNotesSpace = () => {
                 {lectureData.map((lecture, index) => (
                   <div
                     key={index}
-                    className="min-w-[50%] pr-3 pl-0.5 transition-opacity duration-300 ease-out"
+                    className="min-w-[45%] pr-3 pl-0.5 transition-opacity duration-300 ease-out"
                     style={{
                       opacity:
                         index >= currentLectureIndex && index < currentLectureIndex + 3
@@ -131,8 +143,8 @@ const DigitalNotesSpace = () => {
             </div>
           </section>
 
-          <section className="relative"> {/* No margin needed here as it's the last section */}
-            <h2 className="text-xl text-blue-800 font-bold mb-3">Assignments</h2>
+          <section className="relative">
+            <h2 className="text-xl text-blue-800 font-semibold mb-3">Assignments</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -159,7 +171,7 @@ const DigitalNotesSpace = () => {
                     </div>
                   ))}
               </div>
-              <div className="absolute right-0 top-0 bottom-0 w-1/6 backdrop-blur-md pointer-events-none z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-1/6 md:backdrop-blur-md pointer-events-none sm:backdrop-blur-none z-10" />
               <button
                 onClick={() =>
                   setCurrentAssignmentIndex((prevIndex) => (prevIndex + 1) % totalAssignments)
@@ -171,7 +183,6 @@ const DigitalNotesSpace = () => {
               </button>
             </div>
           </section>
-
         </main>
       </div>
     </div>

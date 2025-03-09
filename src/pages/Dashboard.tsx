@@ -55,15 +55,6 @@ const Dashboard: React.FC = () => {
             <FeePaymentDetails />
             <MarksSection />
           </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:pl-64">
-            <ClassTimetable />
-            <FocusMode toggleFocusMode={toggleFocusMode} focusMode={focusMode} />
-            <UpcomingEvents />
-            <div className="flex flex-col gap-6">
-              <Notes />
-              <UpcomingExaminations />
-            </div>
-          </div> */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:pl-64">
             <div>
               <ClassTimetable />
