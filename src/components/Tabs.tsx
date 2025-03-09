@@ -14,12 +14,12 @@ const Tabs = () => {
 
   return (
     <div className="flex items-center space-x-3 pb-4">
-      <FontAwesomeIcon icon={faSliders} className="text-blue-900 rounded-full md:p-2 sm:p-2" />
+      <FontAwesomeIcon icon={faSliders} className="text-[#1E3A8A] rounded-full md:p-2 sm:p-2" />
       {tabs.map((tab) => (
         <button
           key={tab.name}
-          className={`md:px-2 md:py-1 sm:px-2 sm:py-0.5 md:text-lg sm:text-xs font-medium transition-all rounded-lg ${
-            activeTab === tab.name ? "bg-blue-900 text-white" : "bg-white text-blue-900 border border-blue-600"
+          className={`px-2 py-1 md:text-lg sm:text-xs font-medium transition-all rounded-lg ${
+            activeTab === tab.name ? "bg-[#1E3A8A] text-white" : "bg-white text-[#1E3A8A] border border-[#1E3A8A]"
           }`}
           onClick={() => setActiveTab(tab.name)}
         >

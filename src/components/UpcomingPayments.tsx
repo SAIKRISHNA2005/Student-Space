@@ -13,27 +13,27 @@ const UpcomingPayments = () => {
         <div key={index} className="flex justify-between items-center py-2 border-b last:border-none">
           {/* Left Section */}
           <div className="flex items-center space-x-3">
-            <div className="w-1 h-10 bg-blue-700 rounded-full" />
+            <div className="w-1 h-10 bg-[#1E3A8A] rounded-full" />
             <div>
-              <p className="text-blue-700 text-md font-medium">{payment.name}</p>
+              <p className="text-[#1E3A8A] text-md font-medium">{payment.name}</p>
               <p className="text-sm text-gray-500">{payment.type}</p>
             </div>
           </div>
 
           {/* Middle Section */}
           <div className="text-left pr-2">
-            <p className="font-medium sm:text-xs md:text-sm text-blue-600">{payment.amount}</p>  {/* Updated text color */}
+            <p className="font-medium sm:text-xs md:text-sm text-[#1E3A8A]">{payment.amount}</p>  {/* Updated text color */}
             <p className="text-sm text-gray-500">Due {payment.due}</p>
           </div>
 
           {/* Right Section */}
           <div className="flex items-center space-x-2 sm:flex-col md:flex-row">
             <input type="checkbox" className="w-4 h-4" />
-            <p className="md:text-sm sm:text-xs text-blue-600">Payment Pending</p>  {/* Updated text color */}
-            <button className="px-3 py-1 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition hidden sm:block">
+            <p className="md:text-sm sm:text-xs text-[#1E3A8A]">Payment Pending</p>  {/* Updated text color */}
+            <button className="px-2 py-1 text-sm bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition hidden sm:block">
               Download Invoice
             </button>
-            <button className="px-3 py-1 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition">
+            <button className="px-2 py-1 text-sm bg-[#1E3A8A] text-white rounded-lg hover:bg-[#1E3A8A] transition">
               Pay Fee
             </button>
           </div>

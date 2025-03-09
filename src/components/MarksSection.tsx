@@ -55,7 +55,7 @@ const MarksSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg border border-blue-700 shadow w-full max-w-lg">
+    <div className="bg-white p-4 rounded-lg border border-[#1E3A8A] shadow w-full max-w-lg">
       {/* Header with title and dropdown */}
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold text-lg text-[#1E3A8A]">Marks</h3>

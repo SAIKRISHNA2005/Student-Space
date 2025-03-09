@@ -15,7 +15,7 @@ const Reminders: React.FC = () => {
 
   return (
     <div className="pt-12 md:p-4 sm:p-3 pb-6">
-      <h2 className="text-blue-900 text-3xl font-bold mb-4">Reminders</h2>
+      <h2 className="text-[#1E3A8A] text-3xl font-bold mb-4">Reminders</h2>
       
       {/* Mobile View Carousel */}
       <div className="relative sm:hidden">
@@ -26,14 +26,14 @@ const Reminders: React.FC = () => {
           {assignments.map((assignment, index) => (
             <div 
               key={index} 
-              className="w-1/2 flex-shrink-0 border border-blue-600 p-2 rounded-lg"
+              className="w-1/2 flex-shrink-0 border border-[#1E3A8A] p-2 rounded-lg"
             >
-              <h3 className="text-lg text-blue-600 font-semibold pb-3">{assignment.title}</h3>
+              <h3 className="text-lg text-[#1E3A8A] font-semibold pb-3">{assignment.title}</h3>
               <p className="text-xs text-gray-500 pr-1">{assignment.description}</p>
               <p className="text-xs text-gray-500 pt-1">Due Date: {assignment.dueDate}</p>
               <div className="flex items-center mt-3">
                 <FaUserCircle className="text-gray-500" />
-                <p className="text-xs text-blue-600 ml-2">{assignment.teacher}</p>
+                <p className="text-xs text-[#1E3A8A] ml-2">{assignment.teacher}</p>
               </div>
             </div>
           ))}
@@ -45,7 +45,7 @@ const Reminders: React.FC = () => {
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-10"
             aria-label="Next"
           >
-            <FaChevronRight className="text-blue-600" />
+            <FaChevronRight className="text-[#1E3A8A]" />
           </button>
         )}
       </div>
@@ -55,14 +55,14 @@ const Reminders: React.FC = () => {
         {assignments.map((assignment, index) => (
           <div 
             key={index} 
-            className="border border-blue-600 p-2 rounded-lg"
+            className="border border-[#1E3A8A] p-2 rounded-lg"
           >
-            <h3 className="text-lg text-blue-600 font-semibold pb-3">{assignment.title}</h3>
+            <h3 className="text-lg text-[#1E3A8A] font-semibold pb-3">{assignment.title}</h3>
             <p className="text-xs text-gray-500 pr-1">{assignment.description}</p>
             <p className="text-xs text-gray-500 pt-1">Due Date: {assignment.dueDate}</p>
             <div className="flex items-center mt-3">
               <FaUserCircle className="text-gray-500" />
-              <p className="text-xs text-blue-600 ml-2">{assignment.teacher}</p>
+              <p className="text-xs text-[#1E3A8A] ml-2">{assignment.teacher}</p>
             </div>
           </div>
         ))}

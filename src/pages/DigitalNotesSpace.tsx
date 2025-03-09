@@ -57,14 +57,14 @@ const DigitalNotesSpace = () => {
         <Header toggleSidebar={toggleSidebar} />
 
         <main className="flex-1 overflow-y-auto p-2 md:pl-12 flex flex-col">
-          <h1 className="text-blue-900 md:text-3xl sm:text-lg font-bold mb-4">Digital Notes Space</h1>
-          <span className="text-blue-900 md:text-xl sm:text-md font-semibold pb-2">Notes</span>
+          <h1 className="text-[#1E3A8A] md:text-3xl sm:text-lg font-bold mb-4">Digital Notes Space</h1>
+          <span className="text-[#1E3A8A] md:text-xl sm:text-md font-semibold pb-2">Notes</span>
 
           <Tabs />
 
           {notesData.map((subject, subjectIndex) => (
             <section key={subjectIndex} className="relative mb-8">
-              <h2 className="md:text-lg sm:text-md text-blue-800 font-bold mb-3">{subject.subject}</h2>
+              <h2 className="md:text-lg sm:text-md text-[#1E3A8A] font-bold mb-3">{subject.subject}</h2>
               <div className="relative overflow-hidden">
                 <div
                   className="flex transition-transform duration-300 ease-out"
@@ -100,14 +100,14 @@ const DigitalNotesSpace = () => {
                   className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                   aria-label="Next notes"
                 >
-                  <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                  <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
                 </button>
               </div>
             </section>
           ))}
 
           <section className="relative mb-8">
-            <h2 className="text-xl text-blue-800 font-semibold mb-3">Lecture Videos</h2>
+            <h2 className="text-xl text-[#1E3A8A] font-semibold mb-3">Lecture Videos</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -138,13 +138,13 @@ const DigitalNotesSpace = () => {
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                 aria-label="Next lectures"
               >
-                <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
               </button>
             </div>
           </section>
 
           <section className="relative">
-            <h2 className="text-xl text-blue-800 font-semibold mb-3">Assignments</h2>
+            <h2 className="text-xl text-[#1E3A8A] font-semibold mb-3">Assignments</h2>
             <Tabs />
             <div className="relative overflow-hidden">
               <div
@@ -179,7 +179,7 @@ const DigitalNotesSpace = () => {
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20"
                 aria-label="Next assignments"
               >
-                <FontAwesomeIcon icon={faChevronRight} className="text-blue-600" />
+                <FontAwesomeIcon icon={faChevronRight} className="text-[#1E3A8A]" />
               </button>
             </div>
           </section>

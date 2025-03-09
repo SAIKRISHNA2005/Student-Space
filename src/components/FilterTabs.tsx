@@ -12,7 +12,7 @@ const FilterTabs: React.FC<FilterTabsProps> = ({ filter, setFilter }) => {
         <button
           key={tab}
           className={`px-4 py-2 ${
-            filter === tab ? "border-b-2 border-blue-600 text-blue-600 font-semibold" : "text-gray-600"
+            filter === tab ? "border-b-2 border-[#1E3A8A] text-[#1E3A8A] font-semibold" : "text-gray-600"
           }`}
           onClick={() => setFilter(tab as "All" | "Paid" | "Pending")}
         >

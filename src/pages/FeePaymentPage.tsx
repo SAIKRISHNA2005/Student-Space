@@ -50,13 +50,13 @@ const FeePaymentPage = () => {
             {/* Recent Payments Section */}
             <div className="mb-6">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="font-medium text-blue-800 text-[20px]">Recent Payments</h2>
+                <h2 className="font-medium text-[#1E3A8A] text-[20px]">Recent Payments</h2>
                 <div className="flex space-x-2">
                   {["All", "Paid", "Pending"].map((status) => (
                     <button
                       key={status}
                       className={`px-5 py-0.5 rounded-lg border transition-all duration-200 ${
-                        filter === status ? "text-white bg-blue-700" : "border-blue-800 text-blue-700 hover:bg-gray-200"
+                        filter === status ? "text-white bg-[#1E3A8A]" : "border-[#1E3A8A] text-[#1E3A8A] hover:bg-gray-200"
                       }`}
                       onClick={() => setFilter(status)}
                     >
@@ -71,7 +71,7 @@ const FeePaymentPage = () => {
             </div>
 
             {/* Upcoming Payments Section */}
-            <h2 className="font-medium text-blue-800 text-[20px] mb-4">Upcoming Payments</h2>
+            <h2 className="font-medium text-[#1E3A8A] text-[20px] mb-4">Upcoming Payments</h2>
             <UpcomingPayments />
           </div>
         </main>

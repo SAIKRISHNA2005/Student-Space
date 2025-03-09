@@ -20,7 +20,7 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
         {/* Payment Info */}
         <div>
           {/* Name with truncation and tooltip on hover */}
-          <p className="text-blue-700 text-sm font-medium truncate" title={name}>
+          <p className="text-[#1E3A8A] text-sm font-medium truncate" title={name}>
             {truncatedName}
           </p>
           <p className="text-sm text-gray-500">{type}</p>
@@ -29,7 +29,7 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
 
       {/* Middle Section */}
       <div className="text-center pr-2">
-        <p className="md:font-medium text-sm text-blue-600">{amount}</p>
+        <p className="md:font-medium text-sm text-[#1E3A8A]">{amount}</p>
         <p className="text-sm text-gray-500">Due {due}</p>
       </div>
 
@@ -42,14 +42,14 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
           onChange={handleCheckboxChange}
           className="md:w-4 md:h-4 sm:w-3 sm:h-3"
         />
-        <p className="text-sm text-blue-600">
+        <p className="text-sm text-[#1E3A8A]">
           {isPaid ? "Payment Received" : "Payment Pending"}
         </p>
 
         {/* Download Invoice Button */}
         <button
-          className={`px-3 py-1 text-md text-white rounded-lg transition ${
-            isPaid ? "bg-blue-700 hover:bg-blue-800" : "bg-gray-500 hover:bg-gray-600"
+          className={`px-2 py-1 text-sm text-white rounded-lg transition ${
+            isPaid ? "bg-[#1E3A8A] hover:bg-[#1E3A8A]" : "bg-gray-500 hover:bg-gray-600"
           }`}
         >
           Download Invoice
@@ -57,8 +57,8 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
         {/* Conditional Button */}
         {!isFeePaymentDetails && (
           <button
-            className={`md:px-3 md:py-1 sm:px-2 sm:py-1 md:text-md sm:text-3xs text-white rounded-lg transition hidden sm:block ${
-              isPaid ? "bg-gray-500 cursor-not-allowed" : "bg-blue-700 hover:bg-blue-800"
+            className={`px-2 py-1 text-sm text-white rounded-lg transition hidden sm:block ${
+              isPaid ? "bg-gray-500 cursor-not-allowed" : "bg-[#1E3A8A] hover:bg-[#1E3A8A]"
             }`}
             disabled={isPaid}
           >

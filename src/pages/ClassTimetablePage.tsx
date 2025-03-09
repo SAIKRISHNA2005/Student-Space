@@ -45,7 +45,7 @@ const ClassTimetable = () => {
         <main className="flex-1 overflow-y-auto flex flex-col md:flex-row sm:px-2 md:px-9">
           <div className="flex-1 flex flex-col md:flex-row m-4">
             <div className="flex-1">
-              <h1 className="text-3xl font-bold text-blue-900 mb-4">Class Timetable</h1>
+              <h1 className="text-3xl font-bold text-[#1E3A8A] mb-4">Class Timetable</h1>
 
               {/* Day Selector - Handle the spacing and active button styles */}
               <div className="flex space-x-2 mb-4 overflow-x-auto">
@@ -53,7 +53,7 @@ const ClassTimetable = () => {
                   <button
                     key={day}
                     onClick={() => setActiveDay(day)}
-                    className={`md:px-4 md:py-0.5 sm:px-2 sm:py-0.5 rounded-lg sm:text-xs md:text-lg font-medium transition-all ${activeDay === day ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border border-blue-600'}`}
+                    className={`md:px-4 md:py-0.5 sm:px-2 sm:py-0.5 rounded-lg sm:text-xs md:text-lg font-medium transition-all ${activeDay === day ? 'bg-[#1E3A8A] text-white' : 'bg-white text-[#1E3A8A] border border-[#1E3A8A]'}`}
                   >
                     {day}
                   </button>

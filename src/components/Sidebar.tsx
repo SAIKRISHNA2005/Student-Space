@@ -4,7 +4,7 @@ import SidebarItem from './SidebarItem';
 
 const Sidebar: React.FC = () => {
   return (
-    <nav className="w-[250px] h-[98vh] bg-[#1E3A8A] text-white p-4 absolute top-[5px] left-[9px] rounded-tl-[8px] rounded-tr-[8px] rounded-bl-[8px] rounded-br-[150px] shadow-[2px_2px_20px_3px_#00000066] flex flex-col justify-between overflow-hidden">
+    <nav className="w-[250px] h-[98vh] bg-[#1E3A8A] text-white p-4 absolute top-[5px] left-[9px] rounded-tl-[8px] rounded-tr-[8px] rounded-bl-[8px] rounded-br-[8px] shadow-[2px_2px_20px_3px_#00000066] flex flex-col justify-between overflow-hidden">
       <div className="mb-2">
         <h1 className="text-l font-bold">SPace</h1>
       </div>

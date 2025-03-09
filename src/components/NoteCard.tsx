@@ -18,15 +18,15 @@ const NoteCard = ({ title, subtitle, date, teacher, important }: NoteProps) => {
   };
 
   return (
-    <div className={`p-3 rounded-lg border ${isBookmarked ? "bg-blue-600 text-white" : "bg-white"} shadow-md flex flex-col h-full`}>
+    <div className={`p-3 rounded-lg border ${isBookmarked ? "bg-[#1E3A8A] text-white" : "bg-white"} shadow-md flex flex-col h-full`}>
       <div className="flex items-start justify-between">
         <div className="flex items-center space-x-2">
-          <FontAwesomeIcon icon={faBookOpen} className={`md:text-lg sm:text-sm ${isBookmarked ? "text-white" : "text-blue-600"}`} />
-          <h3 className={`md:text-lg sm:text-xs font-semibold ${isBookmarked ? "text-white" : "text-blue-900"}`}>{title}</h3>
+          <FontAwesomeIcon icon={faBookOpen} className={`md:text-lg sm:text-sm ${isBookmarked ? "text-white" : "text-[#1E3A8A]"}`} />
+          <h3 className={`md:text-lg sm:text-xs font-semibold ${isBookmarked ? "text-white" : "text-[#1E3A8A]"}`}>{title}</h3>
         </div>
         <FontAwesomeIcon
           icon={faBookmark}
-          className={`md:text-lg sm:text-sm cursor-pointer ${isBookmarked ? "text-white" : "text-blue-600"}`}
+          className={`md:text-lg sm:text-sm cursor-pointer ${isBookmarked ? "text-white" : "text-[#1E3A8A]"}`}
           onClick={toggleBookmark}
         />
       </div>
