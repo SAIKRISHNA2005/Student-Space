@@ -23,7 +23,7 @@ const StudentProfile: React.FC = () => {
             className="absolute inset-0 bg-gray-600 bg-opacity-75"
             onClick={toggleSidebar}
           ></div>
-          <div className="absolute inset-y-0 left-0 w-56 bg-[#1E3A8A] text-white shadow-lg">
+          <div className="absolute inset-y-0 left-0 w-56 text-white">
             <div className="flex justify-end p-4">
               <button onClick={toggleSidebar} className="text-white">
                 <X size={24} />
