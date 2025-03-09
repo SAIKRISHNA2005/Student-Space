@@ -63,10 +63,10 @@ const ClassTimetable = () => {
               {/* Timetable */}
               <Timetable activeDay={activeDay} />
 
-              <div className="mt-4 md:mb-52 sm:mb-0">
+              {/* <div className="mt-4 md:mb-52 sm:mb-0"> */}
                 {/* Exam Schedule */}
-                <ExamSchedule />
-              </div>
+                {/* <ExamSchedule /> */}
+              {/* </div> */}
             </div>
 
             {/* Reminders - Make it responsive for smaller screens */}
