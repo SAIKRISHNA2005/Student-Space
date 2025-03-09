@@ -18,7 +18,7 @@ const Tabs = () => {
       {tabs.map((tab) => (
         <button
           key={tab.name}
-          className={`md:px-3 md:py-1 xs:px-4 xs:py-1 md:text-md xs:text-sm font-medium transition-all rounded-lg ${
+          className={`md:px-3 md:py-1 xs:px-4 xs:py-1 md:text-lg xs:text-xs font-medium transition-all rounded-lg ${
             activeTab === tab.name ? "bg-[#1E3A8A] text-white" : "bg-white text-[#1E3A8A] border border-[#1E3A8A]"
           }`}
           onClick={() => setActiveTab(tab.name)}
