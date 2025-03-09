@@ -28,7 +28,7 @@ const PaymentItem = ({ name, type, amount, due, status, isFeePaymentDetails }: a
       </div>
 
       {/* Middle Section */}
-      <div className="text-center pr-2">
+      <div className="text-left pr-2">
         <p className="md:font-medium text-sm text-[#1E3A8A]">{amount}</p>
         <p className="text-sm text-gray-500">Due {due}</p>
       </div>
